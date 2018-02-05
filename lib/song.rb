@@ -61,10 +61,14 @@ class Song
 
   end
 
+  def create_from_filename(mp3)
+
+  end
+
 
 
   #detroys all the songs
-  def self.destroy_all 
+  def self.destroy_all
     @@all.clear
   end
 
