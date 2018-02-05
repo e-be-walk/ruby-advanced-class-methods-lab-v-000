@@ -67,8 +67,16 @@ class Song
     song
   end
 
-  def create_from_filename(mp3)
-
+  #initializes and saves a song and artist_name based on the filename format.
+  def create_from_filename(filename)
+    array = filename.split(" - ")
+    artist_name = array[0]
+    name = array[1].chomp(".mp3")
+    song = self.new
+    song.name = name
+    song.artist_name = artist_name
+    song
+    self.all << song
   end
 
 
